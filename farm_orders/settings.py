@@ -48,7 +48,7 @@ INSTALLED_APPS = [
 
     # Local Apps
     'core',
-    'accounts'
+    'accounts',
     'orders',
     'products',
 ]
@@ -173,3 +173,5 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8000",
 ]
 CORS_ALLOW_CREDENTIALS = True
+
+AUTH_USER_MODEL = 'accounts.User'
