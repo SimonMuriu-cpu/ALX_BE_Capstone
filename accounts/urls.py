@@ -4,10 +4,13 @@ from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
+from .views import LogoutView, dashboard_view
 
 urlpatterns = [
     path('register/', RegisterView.as_view()),
     path('login/', TokenObtainPairView.as_view()),
     path('refresh/', TokenRefreshView.as_view()),
     path('profile/', ProfileView.as_view()),
+    path('logout/', LogoutView.as_view(), name='logout'),
+    path('dashboard/', dashboard_view, name='dashboard'),
 ]
