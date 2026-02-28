@@ -5,7 +5,7 @@ from django.urls import path
 router = DefaultRouter()
 router.register('', ProductViewSet)
 
-urlpatterns = router.urls 
-urlpatterns+= [
+# concatenate router-generated urls with any additional html view
+urlpatterns = router.urls + [
     path('', product_list, name='product_list'),
 ]
